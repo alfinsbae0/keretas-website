@@ -6,8 +6,8 @@ import Splash2 from "./components/splash_2";
 export default function Home() {
   return (
     <>
-      // <Splashscreen />
-    <Splash2 />
+      {/* <Splashscreen /> */}
+      <Splash2 />
       <HomeLayout>
         <Homepage />
       </HomeLayout>
