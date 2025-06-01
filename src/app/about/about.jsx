@@ -25,7 +25,7 @@ export default function AboutPage() {
             title: 'Design & Branding',
             description: 'Visually impactful designs, packaging, POSM, and branding to enhance identity and connect with audiences.',
             backgroundColor: 'bg-[#b2d8ca]',
-            icon: '/icon_1.png', // design icon
+            icon: '/icon_1.png', 
             iconPosition: 'top-left'
         },
         {
@@ -33,7 +33,7 @@ export default function AboutPage() {
             title: 'Digital Marketing',
             description: 'Social media management, campaigns, and content to boost online presence and foster customer loyalty.',
             backgroundColor: 'bg-[#fff6d1]',
-            icon: '/icon_2.png', // marketing icon
+            icon: '/icon_2.png', 
             iconPosition: 'bottom-right'
         },
         {
@@ -41,7 +41,7 @@ export default function AboutPage() {
             title: 'Web & App Development',
             description: 'User-friendly websites and apps with sleek design and seamless functionality for better engagement.',
             backgroundColor: 'bg-[#d8eef8]',
-            icon: '/icon_3.png', // web development icon
+            icon: '/icon_3.png', 
             iconPosition: 'top-right'
         },
         {
@@ -49,7 +49,7 @@ export default function AboutPage() {
             title: 'Tech-Driven Solutions',
             description: 'Technology consultancy, tools, and platforms to drive efficiency and accelerate business growth.',
             backgroundColor: 'bg-[#ffd4b2]',
-            icon: '/icon_4.png', // web development icon
+            icon: '/icon_4.png',
             iconPosition: 'bottom-left'
         }
     ];
@@ -166,34 +166,24 @@ export default function AboutPage() {
             {/* content 3 */}
             <section className="py-16 px-4 bg-white">
                 <div className="max-w-7xl mx-auto">
-                    {/* Header */}
                     <div className="mb-0 md:mb-10">
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
                             What Sets Us Apart
                         </h2>
                     </div>
-
-                    {/* Features */}
                     <div className="relative">
                         {features.map((feature, index) => (
                             <div key={index} className="group md:hover:bg-green-700 transition-colors duration-300 cursor-pointer relative">
-                                {/* Divider atas */}
                                 <div className="border-b border-slate-200"></div>
                                 <div className="flex flex-col lg:flex-row lg:items-start px-2 py-4 relative">
-                                    {/* Text Content - Modified Layout */}
                                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between w-full lg:gap-8">
-                                        {/* Title - Left side */}
                                         <h3 className="text-xl md:text-2xl font-semibold text-slate-800 md:group-hover:text-white mb-3 lg:mb-0 lg:min-w-[280px] leading-tight transition-colors duration-300">
                                             {feature.title}
                                         </h3>
-
-                                        {/* Description - Right side */}
                                         <p className="text-slate-600 md:group-hover:text-white text-base md:text-md leading-relaxed lg:max-w-[400px] transition-colors duration-300 mb-4 lg:mb-0">
                                             {feature.description}
                                         </p>
                                     </div>
-
-                                    {/* Image - Hidden on desktop, shown on mobile */}
                                     <div className="block lg:hidden mt-4">
                                         <img
                                             src={feature.image}
@@ -202,8 +192,6 @@ export default function AboutPage() {
                                         />
                                     </div>
                                 </div>
-
-                                {/* Image - Show on hover for desktop - Positioned absolutely relative to viewport */}
                                 <div className="hidden lg:block fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 z-50 pointer-events-none">
                                     <img
                                         src={feature.image}
@@ -212,7 +200,6 @@ export default function AboutPage() {
                                     />
                                 </div>
 
-                                {/* Divider bawah */}
                                 <div className="border-b border-slate-200"></div>
                             </div>
                         ))}
@@ -221,7 +208,6 @@ export default function AboutPage() {
             </section>
             {/* content 4 */}
             <section className="min-h-32 bg-black relative overflow-hidden">
-                {/* Marquee Text */}
                 <div className="bg-orange-500 py-4 h-32 overflow-hidden whitespace-nowrap flex">
                     <div className="flex items-center">
                         <span className="text-white text-4xl md:text-6xl font-bold flex items-center gap-4">
@@ -242,9 +228,7 @@ export default function AboutPage() {
                 </div>
 
 
-                {/* Main Content */}
                 <JargonAnimated />
-
 
 
             </section>
