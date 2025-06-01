@@ -57,7 +57,7 @@ const JargonAnimated = () => {
 
     return (
         <div ref={sectionRef} className="flex flex-col items-center justify-center py-20 text-center">
-            {/* Main Heading */}
+            
             <div className="mb-8">
                 <motion.h1
                     style={{ x: xRightToLeft }}
