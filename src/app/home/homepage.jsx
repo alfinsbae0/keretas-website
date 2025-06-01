@@ -68,7 +68,7 @@ export default function Homepage() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ ease: "easeInOut", duration: 0.4, delay: 3.5 }}
                     >
-                        <h1 className="font-bold text-black text-5xl md:text-[85px] mb-5 md:mb-14 md:leading-24" >Grow beyond limits with us</h1>
+                        <h1 className="font-bold text-black min-w-xl text-5xl md:text-[78px] mb-5 md:mb-14 md:leading-24" >Grow beyond limits with us</h1>
                     </motion.div>
                     <motion.p
                         // whileInView={{ y: 0, opacity: 1 }}
