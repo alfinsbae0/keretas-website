@@ -13,7 +13,7 @@ import "./globals.css";
 
 const poppins = Poppins({
   // variable: "--font-Poppins",
-  // subsets: ["latin"],
+  subsets: ["latin"],
   weight: ["100", "200", "400", "600", "700", "800", "900"],
 });
 
