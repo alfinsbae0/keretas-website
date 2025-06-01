@@ -25,7 +25,7 @@ export default function FormContact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form Data:', formData);
-        // Handle form submission here
+       
     };
 
     return (
@@ -59,12 +59,12 @@ export default function FormContact() {
                             />
                         )}
 
-                        {/* Divider line */}
+                       
                         <div className="w-full pr-10 h-px bg-gray-200"></div>
                     </div>
                 ))}
 
-                {/* Submit Button */}
+                
                 <div className="pt-6">
                     <button
                         type="submit"
