@@ -112,10 +112,7 @@ export default function TestimonialSlider() {
     return (
         <div className="bg-white py-5 px-4 md:px-20 overflow-hidden">
             <div className="max-w-full mx-auto">
-
-                {/* Mobile Layout */}
                 <div className="md:hidden">
-                    {/* Mobile Image with Animation */}
                     <div className="flex justify-center mb-8">
                         <div className="relative">
                             <AnimatePresence mode="wait" custom={direction}>
@@ -137,7 +134,6 @@ export default function TestimonialSlider() {
                         </div>
                     </div>
 
-                    {/* Mobile Navigation */}
                     <div className="flex justify-between items-center mb-8 px-8">
                         <motion.button
                             whileHover={{ scale: 1.1 }}
