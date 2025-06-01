@@ -26,7 +26,6 @@ export default function Navbar() {
                 <>
                     <div className="w-auto mx-4 md:mx-14 py-5">
                         <div className="relative flex h-20 items-center justify-between">
-                            {/* Logo */}
                             <div className="py-8 h-36 w-36">
                                 <Link href="/">
                                     <img
@@ -37,7 +36,6 @@ export default function Navbar() {
                                 </Link>
                             </div>
 
-                            {/* Desktop Navigation */}
                             <div className="hidden sm:ml-6 sm:block">
                                 <div className="flex space-x-10 items-center">
                                     {navigation.map((item) => (
@@ -60,7 +58,6 @@ export default function Navbar() {
                                 </div>
                             </div>
 
-                            {/* Mobile menu button */}
                             <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                                 <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-black hover:text-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none focus:ring-inset z-50">
                                     <span className="absolute -inset-0.5" />
@@ -75,7 +72,6 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    {/* Mobile menu - Now floating/overlay */}
                     <DisclosurePanel className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-40">
                         <div className="space-y-1 px-6 py-4">
                             {navigation.map((item) => (
