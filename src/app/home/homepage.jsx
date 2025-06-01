@@ -198,12 +198,9 @@ export default function Homepage() {
                     </motion.h1>
                 </div>
 
-                {/* Fixed Layout Container */}
                 <div className="max-w-full justify-between pb-12 md:pb-20">
                     <div className="flex md:flex-col lg:flex-row gap-8 items-start">
-                        {/* Form Container */}
                         <div className="w-full md:ml-32 lg:max-w-2xl relative">
-                            {/* Background Image - Only visible on mobile, behind form */}
                             <div
                                 className="absolute inset-0 lg:hidden bg-contain bg-center bg-no-repeat opacity-20 pointer-events-none"
                                 style={{
@@ -211,13 +208,11 @@ export default function Homepage() {
                                 }}
                             ></div>
 
-                            {/* Form Content */}
                             <FormContact />
 
                         </div>
 
 
-                        {/* Image Container - Only visible on desktop */}
                         <div className="hidden md:flex w-full lg:justify-end items-end">
                             <img
                                 className="h-auto w-full max-w-lg lg:max-w-2xl object-contain"
@@ -229,10 +224,9 @@ export default function Homepage() {
                     </div>
                     <div className="my-10 mx-4 md:mx-20">
                         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 w-full content-center justify-between h-auto px-5 md:p-8 rounded-lg">
-                            {/* Contact */}
                             {contacts.map((contact) => (
                                 <div key={contact.name} className="flex flex-row gap-6 items-center flex-1">
-                                    <div className={`w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 rotate-45 ${contact.color} flex-shrink-0`}></div>
+                                    <div className={`w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rotate-45 ${contact.color} flex-shrink-0`}></div>
                                     <p className="text-black text-sm md:text-base leading-relaxed whitespace-pre-line">
                                         {contact.value}
                                     </p>
