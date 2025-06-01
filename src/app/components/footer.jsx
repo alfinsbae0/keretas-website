@@ -20,7 +20,7 @@ export default function Footer() {
         <footer className="bg-[#ffc715] px-6 md:px-12 lg:px-16 py-12 md:py-16 relative">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-                    {/* Subscribe Section - First column on desktop, last on mobile (wider) */}
+                   
                     <div className="order-3 md:order-3 lg:order-1 lg:col-span-2">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">Subscribe!</h3>
                         <p className="text-gray-800 mb-6">Stay in the loop with our latest updates!</p>
@@ -46,7 +46,7 @@ export default function Footer() {
 
                     </div>
 
-                    {/* Email Section & Office Location - Second column */}
+                    
                     <div className="order-1 md:order-1 lg:order-2 lg:col-span-1">
                         <div className="mb-12">
                             <h3 className="text-xl font-semibold text-gray-900 mb-4">Email us</h3>
@@ -69,7 +69,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Call us & Follow us Section - Third column */}
+                  
                     <div className="order-2 md:order-2 lg:order-3 lg:col-span-1">
                         <div className="mb-8">
                             <h3 className="text-xl font-semibold text-gray-900 mb-4">Call us</h3>
@@ -104,7 +104,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Scroll to Top Button */}
+           
             <button
                 onClick={scrollToTop}
                 className="fixed bottom-8 right-8 w-12 h-12 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center shadow-lg transition-colors z-50"
