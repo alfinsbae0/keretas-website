@@ -13,7 +13,7 @@ const services = [
         title: 'Design & Branding',
         description: 'Visually impactful designs, packaging, POSM, and branding to enhance identity and connect with audiences.',
         backgroundColor: 'bg-[#b2d8ca]',
-        icon: '/icon_1.png', // design icon
+        icon: '/icon_1.png',
         iconPosition: 'top-left'
     },
     {
@@ -21,7 +21,7 @@ const services = [
         title: 'Digital Marketing',
         description: 'Social media management, campaigns, and content to boost online presence and foster customer loyalty.',
         backgroundColor: 'bg-[#fff6d1]',
-        icon: '/icon_2.png', // marketing icon
+        icon: '/icon_2.png',
         iconPosition: 'bottom-right'
     },
     {
@@ -29,7 +29,7 @@ const services = [
         title: 'Web & App Development',
         description: 'User-friendly websites and apps with sleek design and seamless functionality for better engagement.',
         backgroundColor: 'bg-[#d8eef8]',
-        icon: '/icon_3.png', // web development icon
+        icon: '/icon_3.png',
         iconPosition: 'top-right'
     },
     {
@@ -37,7 +37,7 @@ const services = [
         title: 'Tech-Driven Solutions',
         description: 'Technology consultancy, tools, and platforms to drive efficiency and accelerate business growth.',
         backgroundColor: 'bg-[#ffd4b2]',
-        icon: '/icon_4.png', // web development icon
+        icon: '/icon_4.png',
         iconPosition: 'bottom-left'
     }
 ]
@@ -211,7 +211,7 @@ export default function Homepage() {
                                 }}
                             ></div>
 
-                            {/* Form Content - Solid, no transparency */}
+                            {/* Form Content */}
                             <FormContact />
 
                         </div>
@@ -229,9 +229,9 @@ export default function Homepage() {
                     </div>
                     <div className="my-10 mx-4 md:mx-20">
                         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 w-full content-center justify-between h-auto px-5 md:p-8 rounded-lg">
-                            {/* Contact Item 1 */}
+                            {/* Contact */}
                             {contacts.map((contact) => (
-                                <div key={contact.name} className="flex flex-row gap-8 items-center flex-1">
+                                <div key={contact.name} className="flex flex-row gap-6 items-center flex-1">
                                     <div className={`w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 rotate-45 ${contact.color} flex-shrink-0`}></div>
                                     <p className="text-black text-sm md:text-base leading-relaxed whitespace-pre-line">
                                         {contact.value}
