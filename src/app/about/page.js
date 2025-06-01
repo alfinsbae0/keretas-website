@@ -5,7 +5,8 @@ import AboutPage from "./about";
 export default function About() {
   return (
     <>
-      <Splashscreen />
+      {/* <Splashscreen /> */}
+      <Splash2 />
       <HomeLayout>
         <AboutPage />
       </HomeLayout>
