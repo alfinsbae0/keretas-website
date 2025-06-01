@@ -2,26 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
-/**
- * CustomCard component
- *
- * Props:
- * - id:                 nomor/angka kartu (wajib)
- * - title:              judul utama (wajib)
- * - description:        deskripsi di dalam kartu (opsional)
- * - backgroundColor:    Tailwind class untuk background kartu, misal 'bg-blue-100'
- * - titleColor:         Tailwind class untuk warna judul, misal 'text-gray-800'
- * - descriptionColor:   Tailwind class untuk warna deskripsi, misal 'text-gray-600'
- * - icon:               URL gambar ikon (opsional)
- * - iconPosition:       'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
- * - iconSize:           ukuran ikon dalam pixel (default 60)
- * - className:          Tailwind class tambahan untuk ukuran wrapper (misal 'h-96 w-64')
- * - delay:              delay animasi (opsional, dalam detik)
- * - duration:           durasi animasi (opsional, dalam detik)
- *
- * NOTE: Menggunakan Framer Motion untuk animasi ketika komponen masuk viewport.
- *       Jika icon di atas, card muncul dari bawah. Jika icon di bawah, card muncul dari atas.
- */
+
 export default function CustomCard({
     id,
     title,
@@ -36,9 +17,7 @@ export default function CustomCard({
     delay = 0,
     duration = 0.5
 }) {
-    // =================
-    // Helpers
-    // =================
+    
     const IconDisplay = ({ icon, size = 60, alt = 'Icon' }) => (
         <img
             src={icon}
@@ -95,7 +74,7 @@ export default function CustomCard({
             viewport={{ once: true, amount: 0.2 }}
             className={`relative flex flex-col ${className}`}
         >
-            {/* jika icon di bottom, area angka di atas */}
+           
             {!isTop && (
                 <div className="flex items-center justify-start basis-[10%] pl-10">
                     <span className="transform -rotate-90 text-2xl font-bold text-gray-400">
@@ -104,17 +83,17 @@ export default function CustomCard({
                 </div>
             )}
 
-            {/* Area Card mengambil 90% tinggi wrapper */}
+          
             <div className="relative basis-[90%] w-full h-full">
                 <div className={`relative w-full h-full ${backgroundColor} p-6 flex flex-col`}>
-                    {/* Icon di dalam kartu */}
+                   
                     {icon && (
                         <div className={`absolute ${getIconPositionClasses()}`}>
                             <IconDisplay icon={icon} size={iconSize} />
                         </div>
                     )}
 
-                    {/* Konten teks: posisi di ujung sesuai iconPosition */}
+                   
                     <div
                         className={`${getContentPaddingClasses()} flex-1 flex flex-col ${isTop ? 'justify-end' : 'justify-start'
                             } overflow-hidden`}
@@ -131,7 +110,7 @@ export default function CustomCard({
                 </div>
             </div>
 
-            {/* jika icon di top, area angka di bawah */}
+           
             {isTop && (
                 <div className="flex items-center justify-start basis-[10%] pl-10">
                     <span className="transform -rotate-90 text-2xl font-bold text-gray-400">
