@@ -35,14 +35,12 @@ export default function Splashscreen() {
                         exit: { duration: 0.6, ease: "easeInOut" }
                     }}
                 >
-                    {/* Animated Background Elements */}
                     <motion.div
                         className="absolute top-0 left-0 w-full h-full"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 1 }}
                     >
-                        {/* Top left circle */}
                         <motion.div
                             className="absolute -top-20 -left-20 w-40 h-40 rounded-full bg-green-100"
                             animate={{
@@ -55,8 +53,6 @@ export default function Splashscreen() {
                                 ease: "linear"
                             }}
                         />
-
-                        {/* Bottom right circle */}
                         <motion.div
                             className="absolute -bottom-20 -right-20 w-32 h-32 rounded-full bg-green-50"
                             animate={{
@@ -69,8 +65,6 @@ export default function Splashscreen() {
                                 ease: "linear"
                             }}
                         />
-
-                        {/* Floating squares */}
                         <motion.div
                             className="absolute top-1/4 right-1/4 w-6 h-6 bg-green-200 rounded"
                             animate={{
@@ -84,7 +78,6 @@ export default function Splashscreen() {
                                 ease: "easeInOut"
                             }}
                         />
-
                         <motion.div
                             className="absolute bottom-1/3 left-1/4 w-4 h-4 bg-green-300 rounded-full"
                             animate={{
@@ -99,8 +92,6 @@ export default function Splashscreen() {
                             }}
                         />
                     </motion.div>
-
-                    {/* Logo Container */}
                     <motion.div
                         className="relative z-10 flex flex-col items-center"
                         initial={{ scale: 0.5, opacity: 0 }}
@@ -137,8 +128,6 @@ export default function Splashscreen() {
                                 }}
                             />
                         </motion.div>
-
-                        {/* Company Name */}
                         <motion.div
                             className="text-center"
                             initial={{ y: 20, opacity: 0 }}
@@ -166,8 +155,6 @@ export default function Splashscreen() {
                             </motion.h1>
                         </motion.div>
                     </motion.div>
-
-                    {/* Tagline */}
                     <AnimatePresence>
                         {showText && (
                             <motion.div
@@ -191,8 +178,6 @@ export default function Splashscreen() {
                             </motion.div>
                         )}
                     </AnimatePresence>
-
-                    {/* Loading Indicator */}
                     <motion.div
                         className="absolute bottom-8 flex items-center justify-center"
                         initial={{ opacity: 0 }}
