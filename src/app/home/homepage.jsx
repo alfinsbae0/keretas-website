@@ -225,9 +225,9 @@ export default function Homepage() {
                     <div className="my-10 mx-4 md:mx-20">
                         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 w-full content-center justify-between h-auto px-5 md:p-8 rounded-lg">
                             {contacts.map((contact) => (
-                                <div key={contact.name} className="flex flex-row gap-6 items-center flex-1">
+                                <div key={contact.name} className="flex flex-row gap-8 items-center flex-1">
                                     <div className={`w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rotate-45 ${contact.color} flex-shrink-0`}></div>
-                                    <p className="text-black text-sm md:text-base leading-relaxed whitespace-pre-line">
+                                    <p className="text-black text-sm md:text-md leading-relaxed whitespace-pre-line">
                                         {contact.value}
                                     </p>
                                 </div>
