@@ -60,7 +60,7 @@ export default function Homepage() {
     return (
         <>
             {/* hero */}
-            <section className="hero flex flex-row mx-4 md:mx-12 md:gap-9">
+            <section className="hero flex mx-4 md:mx-12 md:gap-9">
                 <div className="md:basis-1/2 mt-12">
                     <motion.div
                         // whileInView={{ y: 0, opacity: 1 }}
@@ -68,7 +68,7 @@ export default function Homepage() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ ease: "easeInOut", duration: 0.4, delay: 3.5 }}
                     >
-                        <h1 className="font-bold text-black min-w-xl text-5xl md:text-[78px] mb-5 md:mb-14 md:leading-24" >Grow beyond limits with us</h1>
+                        <h1 className="font-bold text-black text-5xl md:text-[78px] mb-5 md:mb-14 md:leading-24" >Grow beyond limits with us</h1>
                     </motion.div>
                     <motion.p
                         // whileInView={{ y: 0, opacity: 1 }}
@@ -77,7 +77,7 @@ export default function Homepage() {
                         transition={{
                             ease: "easeIn", duration: 0.3, delay: 3.7
                         }}
-                        className="max-w-2xl text-justify text-[20px] text-gray-500">Keretas crafts tailored strategies across creative design, digital marketing, web development, and tech-driven solutions to elevate your brand and drive targeted growth. Experience innovation and customization with us.</motion.p>
+                        className="text-justify text-sm md:text-[20px] text-gray-500">Keretas crafts tailored strategies across creative design, digital marketing, web development, and tech-driven solutions to elevate your brand and drive targeted growth. Experience innovation and customization with us.</motion.p>
                     <motion.button
                         // whileInView={{ y: 0, opacity: 1 }}
                         initial={{ y: 30, opacity: 0 }}
