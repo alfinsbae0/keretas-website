@@ -1,15 +1,15 @@
 import HomeLayout from "../layouts/home_layout";
 import Splashscreen from "../components/splashscreen";
-import AboutPage from "./about";
 import Splash2 from "../components/splash_2";
+import ArticlesPage from "./articles";
 
-export default function About() {
+export default function Articles() {
   return (
     <>
       {/* <Splashscreen /> */}
       <Splash2 />
       <HomeLayout>
-        <AboutPage />
+        <ArticlesPage />
       </HomeLayout>
     </>
   );

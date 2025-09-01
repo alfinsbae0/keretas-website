@@ -1,5 +1,5 @@
 import Homepage from "./home/homepage";
-import HomeLayout from "./components/home_layout";
+import HomeLayout from "./layouts/home_layout";
 import Splashscreen from "./components/splashscreen";
 import Splash2 from "./components/splash_2";
 

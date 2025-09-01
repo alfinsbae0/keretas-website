@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import { TopLoadingProvider } from "./components/top-loading-provider";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
         // className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
         className={`${poppins.className} antialiased`}
       >
-        {children}
+        <TopLoadingProvider>{children}</TopLoadingProvider>
       </body>
     </html>
   );

@@ -170,7 +170,7 @@ export default function Homepage() {
             </section>
             <img src="https://cdn.prod.website-files.com/65ae58f365086a5b55b30a7d/6642eeef101e7f33e06c5b4f_square%20divider.svg" alt="" />
             {/* content-4 */}
-            <section className="h-auto bg-white">
+            <section className="h-auto bg-white mt-52">
                 <div className="py-12 md:py-20 flex justify-center items-center px-4 md:px-8">
                     <motion.h1
                         initial={{ y: 50, opacity: 0 }}
