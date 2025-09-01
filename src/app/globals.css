@@ -118,6 +118,35 @@ html {
   }
 }
 
+/* Featured article animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(12deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(15deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes grid-flow {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.grid-line {
+  stroke-dasharray: 5, 5;
+  animation: grid-flow 3s linear infinite;
+}
+
 /* Page transition effects */
 .page-enter {
   opacity: 0;

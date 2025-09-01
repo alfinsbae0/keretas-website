@@ -4,6 +4,18 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 // Sample articles data - you can replace this with actual data from your CMS
+const featuredArticle = {
+    id: 0,
+    title: "Boost your online sales with these top conversion strategies",
+    description: "Is easy movement them, for harder your a in duty the except when of interfaces had is screen state be accuse own set the creating how have him, on the into authentic.",
+    image: "/slide_1.png", // You can use a more suitable 3D/abstract image
+    date: "April 15, 2025",
+    readTime: "2 min read",
+    author: "Courtney Henry",
+    slug: "boost-online-sales-conversion-strategies",
+    featured: true
+};
+
 const articlesData = [
     {
         id: 1,
@@ -11,8 +23,7 @@ const articlesData = [
         image: "/slide_1.png",
         date: "April 15, 2025",
         readTime: "7 min read",
-        slug: "elements-that-capture-and-retain-user-interest",
-        featured: true
+        slug: "elements-that-capture-and-retain-user-interest"
     },
     {
         id: 2,
@@ -56,11 +67,125 @@ const articlesData = [
     }
 ];
 
+function FeaturedArticle({ article }) {
+    return (
+        <div className="rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+            <Link href={`/articles/${article.slug}`}>
+                <div className="grid lg:grid-cols-2 gap-0 min-h-[400px]">
+                    {/* Image Section */}
+                    <div className="relative overflow-hidden flex items-center justify-center p-6">
+                        <div className="relative w-full h-full">
+                            {/* 3D Abstract Shape Background */}
+                            <div className="absolute inset-0 opacity-20">
+                                <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur-xl"></div>
+                                <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full blur-lg"></div>
+                                <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-md"></div>
+                            </div>
+
+                            {/* Main 3D Element */}
+                            <div className="relative z-10 flex items-center justify-center h-full">
+                                <div className="relative">
+                                    {/* 3D Grid Lines */}
+                                    <svg width="300" height="200" viewBox="0 0 300 200" className="opacity-60">
+                                        <defs>
+                                            <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stopColor="#3B82F6" />
+                                                <stop offset="50%" stopColor="#10B981" />
+                                                <stop offset="100%" stopColor="#F59E0B" />
+                                            </linearGradient>
+                                        </defs>
+                                        {/* Horizontal lines */}
+                                        {[...Array(8)].map((_, i) => (
+                                            <line
+                                                key={`h-${i}`}
+                                                x1="0"
+                                                y1={i * 25}
+                                                x2="300"
+                                                y2={i * 25}
+                                                stroke="url(#gridGradient)"
+                                                strokeWidth="1"
+                                                opacity={0.7 - i * 0.1}
+                                            />
+                                        ))}
+                                        {/* Vertical curved lines */}
+                                        {[...Array(12)].map((_, i) => (
+                                            <path
+                                                key={`v-${i}`}
+                                                d={`M ${i * 25} 0 Q ${i * 25 + 10} 100 ${i * 25} 200`}
+                                                fill="none"
+                                                stroke="url(#gridGradient)"
+                                                strokeWidth="1"
+                                                opacity={0.8 - Math.abs(i - 6) * 0.1}
+                                            />
+                                        ))}
+                                    </svg>
+
+                                    {/* Central 3D Shape */}
+                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 via-green-500 to-yellow-500 rounded-2xl shadow-xl animate-float"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Content Section */}
+                    <div className="flex flex-col justify-center p-8 lg:p-8">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight hover:text-green-600 transition-colors">
+                            {article.title}
+                        </h2>
+
+                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            {article.description}
+                        </p>
+
+                        {/* Metadata */}
+                        <div className="flex items-center space-x-6 mb-8 text-sm text-gray-500">
+                            <div className="flex items-center">
+                                <div className="w-8 h-8 bg-gray-300 rounded-full mr-3 flex items-center justify-center">
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                    </svg>
+                                </div>
+                                <span className="font-medium">{article.author}</span>
+                            </div>
+
+                            <div className="flex items-center">
+                                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>{article.date}</span>
+                            </div>
+
+                            <div className="flex items-center">
+                                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>{article.readTime}</span>
+                            </div>
+                        </div>
+
+                        {/* Read More Button */}
+                        <div>
+                            <button className="inline-flex items-center px-8 py-4 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition-all duration-300 group">
+                                Read more
+                                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </Link>
+        </div>
+    );
+}
+
 function ArticleCard({ article }) {
     return (
         <div className="group cursor-pointer">
             <Link href={`/articles/${article.slug}`}>
-                <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <div className="relative overflow-hidden">
                         <img
                             src={article.image}
@@ -150,9 +275,8 @@ export default function ArticlesPage() {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Header Section */}
-            <div className="relative bg-white">
+            {/* <div className="relative bg-white">
                 <div className="absolute inset-0 overflow-hidden">
-                    {/* Decorative shapes */}
                     <div className="absolute top-10 right-10 w-20 h-20 bg-green-100 rounded-full opacity-60"></div>
                     <div className="absolute top-32 right-32 w-12 h-12 bg-green-200 rounded-full opacity-40"></div>
                     <div className="absolute bottom-10 left-10 w-16 h-16 bg-blue-100 rounded-full opacity-50"></div>
@@ -166,10 +290,15 @@ export default function ArticlesPage() {
 
                     </div>
                 </div>
+            </div> */}
+
+            {/* Featured Article Section */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+                <FeaturedArticle article={featuredArticle} />
             </div>
 
             {/* Articles Grid */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-18">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {articlesData.map((article) => (
                         <ArticleCard
