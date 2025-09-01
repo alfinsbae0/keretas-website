@@ -8,7 +8,7 @@ const featuredArticle = {
     id: 0,
     title: "Boost your online sales with these top conversion strategies",
     description: "Is easy movement them, for harder your a in duty the except when of interfaces had is screen state be accuse own set the creating how have him, on the into authentic.",
-    image: "/slide_1.png", // You can use a more suitable 3D/abstract image
+    image: "https://cdn.prod.website-files.com/67e7b9e6fcbc49554cffa987/67fe432bb85cae7496654fb3_67e7bd68796d48e9f99c6d3d_thumb-1.webp",
     date: "April 15, 2025",
     readTime: "2 min read",
     author: "Courtney Henry",
@@ -71,67 +71,21 @@ function FeaturedArticle({ article }) {
     return (
         <div className="rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
             <Link href={`/articles/${article.slug}`}>
-                <div className="grid lg:grid-cols-2 gap-0 min-h-[400px]">
+                <div className="flex flex-col lg:flex-row items-center">
                     {/* Image Section */}
-                    <div className="relative overflow-hidden flex items-center justify-center p-6">
-                        <div className="relative w-full h-full">
-                            {/* 3D Abstract Shape Background */}
-                            <div className="absolute inset-0 opacity-20">
-                                <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur-xl"></div>
-                                <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full blur-lg"></div>
-                                <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-md"></div>
-                            </div>
-
-                            {/* Main 3D Element */}
-                            <div className="relative z-10 flex items-center justify-center h-full">
-                                <div className="relative">
-                                    {/* 3D Grid Lines */}
-                                    <svg width="300" height="200" viewBox="0 0 300 200" className="opacity-60">
-                                        <defs>
-                                            <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stopColor="#3B82F6" />
-                                                <stop offset="50%" stopColor="#10B981" />
-                                                <stop offset="100%" stopColor="#F59E0B" />
-                                            </linearGradient>
-                                        </defs>
-                                        {/* Horizontal lines */}
-                                        {[...Array(8)].map((_, i) => (
-                                            <line
-                                                key={`h-${i}`}
-                                                x1="0"
-                                                y1={i * 25}
-                                                x2="300"
-                                                y2={i * 25}
-                                                stroke="url(#gridGradient)"
-                                                strokeWidth="1"
-                                                opacity={0.7 - i * 0.1}
-                                            />
-                                        ))}
-                                        {/* Vertical curved lines */}
-                                        {[...Array(12)].map((_, i) => (
-                                            <path
-                                                key={`v-${i}`}
-                                                d={`M ${i * 25} 0 Q ${i * 25 + 10} 100 ${i * 25} 200`}
-                                                fill="none"
-                                                stroke="url(#gridGradient)"
-                                                strokeWidth="1"
-                                                opacity={0.8 - Math.abs(i - 6) * 0.1}
-                                            />
-                                        ))}
-                                    </svg>
-
-                                    {/* Central 3D Shape */}
-                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 via-green-500 to-yellow-500 rounded-2xl shadow-xl animate-float"></div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div className="lg:w-1/2 relative overflow-hidden min-h-[400px] p-8">
+                        <div className="w-full h-64 lg:h-[400px] rounded-3xl overflow-hidden">
+                            <img
+                                src={article.image}
+                                alt={article.title}
+                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                            />
                         </div>
                     </div>
 
                     {/* Content Section */}
-                    <div className="flex flex-col justify-center p-8 lg:p-8">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight hover:text-green-600 transition-colors">
+                    <div className="lg:w-1/2 flex flex-col justify-center p-8 lg:p-8 min-h-[400px]">
+                        <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight hover:text-green-600 transition-colors">
                             {article.title}
                         </h2>
 
